@@ -1,0 +1,18 @@
+name: Docker Image 3cx2mqttv2
+
+on:
+  push:
+    branches: [ 2.x ]
+  pull_request:
+    branches: [ 2.x ]
+
+jobs:
+
+  build:
+
+    runs-on: debian:jessie
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
