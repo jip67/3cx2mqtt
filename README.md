@@ -6,6 +6,8 @@ This Dockerfile currently builds Debian "jessie" release with pjsip pre-compiled
 We apply a slight customization to the pjsip build to better support chan_respoke and
 WebRTC in general by increasing the maximum number of ice candidates that pjsip allows.
 
+I made a small modification so this container wil also register a sip extension on a 3CX
+
 ## usage
 
 A bundled python script [sip2mqtt.py](https://github.com/MartyTremblay/sip2mqtt) allows the monitoring of SIP connections and publishes the CallerID payload to an MQTT channel. The entrypoint command requires the following parametters:
