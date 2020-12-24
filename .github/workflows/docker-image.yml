@@ -10,7 +10,7 @@ jobs:
 
   build:
 
-    runs-on: debian:jessie
+    runs-on: debian-jessie
 
     steps:
     - uses: actions/checkout@v2
